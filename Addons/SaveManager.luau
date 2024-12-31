@@ -277,7 +277,7 @@ local SaveManager = {} do
 			})
 		end})
 
-		section:AddButton({Title = "Overwrite config", Callback = function()
+		section:AddButton({Title = "Обновить конфиг", Callback = function()
 			local name = SaveManager.Options.SaveManager_ConfigList.Value
 
 			local success, err = self:Save(name)
