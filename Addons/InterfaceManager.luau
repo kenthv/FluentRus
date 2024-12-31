@@ -76,8 +76,8 @@ local InterfaceManager = {} do
 		local section = tab:AddSection("Interface")
 
 		local InterfaceTheme = section:AddDropdown("InterfaceTheme", {
-			Title = "Theme",
-			Description = "Changes the interface theme.",
+			Title = "Тема",
+			Description = "Меняет тему интерфейса.",
 			Values = Library.Themes,
 			Default = Settings.Theme,
 			Callback = function(Value)
@@ -91,8 +91,8 @@ local InterfaceManager = {} do
 	
 		if Library.UseAcrylic then
 			section:AddToggle("AcrylicToggle", {
-				Title = "Acrylic",
-				Description = "The blurred background requires graphic quality 8+",
+				Title = "Акрил",
+				Description = "Размывает фон ( требует качества графики 8+ )",
 				Default = Settings.Acrylic,
 				Callback = function(Value)
 					Library:ToggleAcrylic(Value)
@@ -103,8 +103,8 @@ local InterfaceManager = {} do
 		end
 	
 		section:AddToggle("TransparentToggle", {
-			Title = "Transparency",
-			Description = "Makes the interface transparent.",
+			Title = "Прозрачность",
+			Description = "Делает интерфейс прозрачным.",
 			Default = Settings.Transparency,
 			Callback = function(Value)
 				Library:ToggleTransparency(Value)
@@ -114,7 +114,7 @@ local InterfaceManager = {} do
 		})
 	
 		local MenuKeybind = section:AddKeybind("MenuKeybind", {
-			Title = "Minimize Bind", 
+			Title = "Свернуть окно", 
 			Default = Settings.MenuKeybind,
 			ChangedCallback = function(Value)
 				Settings.MenuKeybind = Value
